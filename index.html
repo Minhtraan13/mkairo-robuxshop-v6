@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>MKAIRO ROBUX SHOP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="logo">MKAIRO<span>ROBUX</span></div>
+  <nav>
+    <button id="homeBtn" class="active">Nạp Robux</button>
+    <button id="historyBtn">Lịch sử</button>
+    <button id="loginBtn" class="login">Đăng nhập Google</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section id="home" class="card">
+    <h1>Nạp Robux chính chủ</h1>
+    <p class="sub">Không cần mật khẩu • Xử lý nhanh • An toàn</p>
+
+    <label>Tên Roblox</label>
+    <input id="roblox">
+
+    <label>Gói Robux</label>
+    <select id="package">
+      <option value="">-- Chọn --</option>
+      <option>80 Robux (10k)</option>
+      <option>145 Robux (30k)</option>
+      <option>500 Robux (100k)</option>
+    </select>
+
+    <div class="grid">
+      <div>
+        <label>Nhà mạng</label>
+        <select id="cardType">
+          <option value="">-- Chọn --</option>
+          <option>Viettel</option>
+        </select>
+      </div>
+      <div>
+        <label>Mệnh giá</label>
+        <select id="cardValue">
+          <option value="">-- Chọn --</option>
+          <option>10.000</option>
+          <option>30.000</option>
+          <option>100.000</option>
+        </select>
+      </div>
+    </div>
+
+    <label>Mã thẻ</label>
+    <input id="cardCode">
+
+    <label>Serial</label>
+    <input id="cardSerial">
+
+    <button id="submit" class="primary">Nạp ngay</button>
+  </section>
+
+  <section id="history" class="card hidden">
+    <h2>Lịch sử giao dịch</h2>
+    <div id="historyList"></div>
+  </section>
+
+  <section class="card">
+    <h2>Giao dịch gần đây</h2>
+    <div id="recentList"></div>
+  </section>
+</main>
+
+<footer>
+  © 2026 MKAIRO ROBUX SHOP • Không thu mật khẩu • Firebase Secure
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
